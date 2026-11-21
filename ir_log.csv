@@ -1,0 +1,5 @@
+frame_id,source,phenomenon,affected_field,effect_on_label
+S01_ir,IR_sim,dây an toàn chìm hoàn toàn vào màu áo tối do IR mô phỏng chỉ dùng kênh đỏ không có độ phản xạ sợi vải thực,seatbelt,giữ unknown vì cả ảnh RGB và IR-sim đều không thấy rõ đường viền dây
+S03_ir,IR_sim,ảnh tối đồng nhất không có hiện tượng suy giảm cường độ sáng theo khoảng cách (falloff) và không có bóng phản xạ LED,light,phải gán unknown thay vì night do là ảnh tổng hợp máy tính
+D02,real_IR,tia hồng ngoại gần NIR 940nm xuyên qua tròng kính râm tối màu làm lộ rõ mắt tài xế như kính trắng nhưng có viền phản quang gọng,glasses,ghi clear nếu thấy rõ tròng mắt; nếu có đốm phản quang che mắt thì mắt ghi unknown
+D03,real_IR,đèn LED hồng ngoại chiếu thẳng vào mắt tạo đốm lóa phản xạ sáng tròn trên đồng tử và tròng kính,right_eye_state,ghi unknown cho trạng thái mắt và bật cờ occluded=1 tại điểm mốc bị chói
