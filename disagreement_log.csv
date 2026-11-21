@@ -1,0 +1,53 @@
+image,label,field,issue,mine,peer,verdict,guideline_rule,action
+D01.png,frame_meta,light,khác giá trị,night,unknown,peer,§4.4 quy tắc 1 (không thấy rõ ánh sáng ngoài xe thì ghi unknown),sửa light thành unknown
+D01.png,object,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,§4.2 (DMS không gán object kể cả chai lọ/vật trên tay),xóa box object
+D02.png,frame_meta,light,khác giá trị,night,unknown,peer,§4.4 quy tắc 1 (không thấy rõ ánh sáng ngoài xe thì ghi unknown),sửa light thành unknown
+D02.png,object,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,§4.2 (DMS không gán object),xóa box object
+D02.png,face,glasses,khác giá trị (IoU=0.59),none,clear,peer,§4.5 (glasses: clear khi nhìn thấy gọng và nhìn xuyên qua tròng kính),sửa glasses thành clear
+D02.png,person,seatbelt,khác giá trị (IoU=0.85),worn_correct,unknown,mine,§4.7 (seatbelt: worn_correct khi thấy rõ dải chéo từ vai xuống),giữ nguyên mine
+D02.png,face13,left_eye_outer.occluded,khác cờ,1,0,mine,§4.6 (bật cờ occluded cho điểm bị gọng kính hoặc phản xạ che),giữ nguyên mine
+D02.png,face13,right_eye_inner.occluded,khác cờ,1,0,mine,§4.6 (bật cờ occluded cho điểm bị chói sáng phản xạ NIR che),giữ nguyên mine
+D03.png,frame_meta,light,khác giá trị,night,unknown,peer,§4.4 quy tắc 1 (không thấy rõ ánh sáng ngoài xe thì ghi unknown),sửa light thành unknown
+D03.png,object,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,§4.2 (DMS không gán object),xóa box object
+D03.png,face,gaze_zone,khác giá trị (IoU=0.58),lap,other,mine,§4.5 (gaze_zone: lap khi mắt và đầu hướng xuống vùng đùi/tay),giữ nguyên mine (lap cụ thể hơn other)
+D03.png,hand,on_wheel,khác giá trị (IoU=0.77),yes,no,peer,§4.7 (on_wheel: chỉ gán yes khi chạm vô lăng; xe tự lái rời tay là bình thường),sửa on_wheel thành no
+D03.png,hand,side,khác giá trị (IoU=0.77),right,left,mine,§4.7 & §4.4 (side là tay của người lái không tính theo chiều ảnh xoay 90°),giữ nguyên mine
+D03.png,hand,side,khác giá trị (IoU=0.79),left,right,mine,§4.7 & §4.4 (side là tay của người lái một người có 1 tay trái 1 tay phải),giữ nguyên mine
+D03.png,face13,mouth_right.occluded,khác cờ,0,1,ambiguous,§4.6 (occluded nếu ước lượng được vị trí khóe miệng ngoài góc khuất),thống nhất chọn occluded=1 theo peer
+D03.png,face13,mouth_right.outside,khác cờ,1,0,ambiguous,§4.6 (chỉ chọn outside khi điểm ra khỏi khung ảnh),sửa outside thành 0 theo peer
+D04.png,frame_meta,light,khác giá trị,night,unknown,peer,§4.4 quy tắc 1 (không thấy rõ ánh sáng ngoài xe thì ghi unknown),sửa light thành unknown
+D04.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,§4.5 (face: không thấy mặt do quay đi/không thấy cả mắt lẫn mũi thì không vẽ),xóa box face
+D04.png,person,seatbelt,khác giá trị (IoU=0.90),worn_correct,unknown,peer,§4.7 & §4.4 quy tắc 1 (không thấy rõ dải dây do bị che thì ghi unknown),sửa seatbelt thành unknown
+D05.png,frame_meta,light,khác giá trị,night,unknown,peer,§4.4 quy tắc 1 (không thấy rõ ánh sáng ngoài xe thì ghi unknown),sửa light thành unknown
+D05.png,face,gaze_zone,khác giá trị (IoU=0.59),cluster,other,mine,§4.5 (gaze_zone: cluster khi mắt hướng vào đồng hồ sau vô lăng),giữ nguyên mine
+D05.png,person,seatbelt,khác giá trị (IoU=0.87),worn_correct,unknown,mine,§4.7 (seatbelt: worn_correct khi thấy rõ dải dây vắt qua vai),giữ nguyên mine
+D05.png,object,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,§4.2 (DMS không gán object),xóa box object
+D05.png,face13,mouth_right.occluded,khác cờ,0,1,peer,§4.6 (bật cờ occluded khi khóe miệng bị che một phần),sửa occluded thành 1
+D05.png,face13,mouth_right.outside,khác cờ,1,0,peer,§4.6 (điểm vẫn nằm trong khuôn mặt nên không đánh outside),sửa outside thành 0
+D06.png,frame_meta,light,khác giá trị,night,unknown,peer,§4.4 quy tắc 1 (không thấy rõ ánh sáng ngoài xe thì ghi unknown),sửa light thành unknown
+D06.png,face13,mouth_right.occluded,khác cờ,0,1,peer,§4.6 (bật cờ occluded khi khóe miệng bị che bởi góc quay nghiêng),sửa occluded thành 1
+S02_ir.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,§4.2 (OMS: ghế không có người lớn ngồi thì không vẽ face),xóa box face
+S02_rgb.png,child_seat,occupied,khác giá trị (IoU=0.87),yes,unknown,peer,§4.1 & §4.8 (child_seat occupied chỉ có no/unknown không có yes),sửa occupied thành unknown
+S02_rgb.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,§4.2 (OMS: ghế trẻ em không có người lớn ngồi thì không vẽ face),xóa box face
+S03_ir.png,object,seat,khác giá trị (IoU=0.93),rear_right,rear_left,mine,§3 & §4.4 quy tắc 3 (ghế theo xe: camera nhìn về sau nên trái ảnh là rear_right),giữ nguyên mine (peer bị lỗi gán theo ảnh)
+S03_rgb.png,object,seat,khác giá trị (IoU=0.86),rear_right,rear_left,mine,§3 & §4.4 quy tắc 3 (ghế theo xe: camera nhìn về sau nên trái ảnh là rear_right),giữ nguyên mine (peer bị lỗi gán theo ảnh)
+S04_ir.png,infant_seat,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,ambiguous,§4.1 & §4.8 (phân biệt infant_seat nôi xách vs child_seat ghế ngồi),giữ infant_seat do có quai xách nôi
+S04_ir.png,child_seat,box,chỉ có ở peer (hoặc IoU thấp),,,ambiguous,§4.1 & §4.8 (thảo luận phân loại nôi xách em bé vs ghế trẻ em),thống nhất chọn infant_seat
+S04_rgb.png,frame_meta,modality,khác giá trị,ir,rgb,peer,§4.3 (ảnh đuôi _rgb bắt buộc modality phải là rgb),sửa modality thành rgb
+S04_rgb.png,infant_seat,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,ambiguous,§4.1 & §4.8 (phân biệt infant_seat nôi xách vs child_seat ghế ngồi),giữ infant_seat do có quai xách nôi
+S04_rgb.png,child_seat,box,chỉ có ở peer (hoặc IoU thấp),,,ambiguous,§4.1 & §4.8 (thống nhất phân loại ghế em bé),thống nhất chọn infant_seat
+S05_ir.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,peer,§4.2 (OMS: người lớn person bắt buộc kèm theo box face),vẽ thêm box face cho person
+S05_rgb.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,peer,§4.2 (OMS: người lớn person bắt buộc kèm theo box face),vẽ thêm box face cho person
+S06_ir.png,infant_seat,facing,khác giá trị (IoU=0.98),rear,front,mine,§4.1 & §4.8 (infant_seat facing: rear khi nôi quay mặt về phía sau xe),giữ nguyên mine (rear)
+S06_ir.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,mine,§4.2 & §3 (bộ ảnh không có trẻ em ngồi nên nôi em bé không vẽ face),giữ nguyên mine (nhắc peer xóa box face)
+S06_rgb.png,infant_seat,facing,khác giá trị (IoU=0.97),rear,front,mine,§4.1 & §4.8 (infant_seat facing: rear khi nôi quay mặt về phía sau xe),giữ nguyên mine (rear)
+S06_rgb.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,mine,§4.2 & §3 (không có người lớn trên nôi không vẽ face),giữ nguyên mine (nhắc peer xóa box face)
+S08_ir.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.46,,peer,§4.2 & §4.8 (vật đặt trong ghế trẻ em là object không vẽ face),xóa box face
+S08_ir.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,§4.2 & §4.8 (không có người ngồi không vẽ face),xóa box face
+S08_ir.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,peer,§4.8 (vật nằm trong child_seat phải vẽ box object riêng cùng seat),vẽ thêm box object theo peer
+S08_ir.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,mine,§4.2 & §4.8 (không vẽ box face cho vật thể),nhắc peer xóa box face
+S08_rgb.png,frame_meta,modality,khác giá trị,ir,rgb,peer,§4.3 (ảnh đuôi _rgb bắt buộc modality phải là rgb),sửa modality thành rgb
+S08_rgb.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.49,,peer,§4.2 & §4.8 (vật nằm trong child_seat là object không vẽ face),xóa box face
+S08_rgb.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,§4.2 & §4.8 (không có người ngồi không vẽ face),xóa box face
+S08_rgb.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,mine,§4.2 & §4.8 (không vẽ box face cho vật thể),nhắc peer xóa box face
+S08_rgb.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,peer,§4.8 (vật nằm trong child_seat phải vẽ box object riêng cùng seat),vẽ thêm box object theo peer
